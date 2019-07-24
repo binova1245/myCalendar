@@ -1,0 +1,79 @@
+.calendar{
+    /* margin: 200px; */
+    display: grid;
+    grid-template-rows: 30px 30px 340px;
+    grid-template-areas: 
+    "nv"
+    "dy"
+    "dt"
+}
+
+.nav{
+    background-color: aliceblue;
+    grid-area: nv;
+    display: grid;
+    grid-auto-columns: 30px 1fr 1fr 30px;
+    grid-template-areas: 
+    "bk mn yr nx"
+}
+
+
+.days{
+    background-color: darkolivegreen;
+    grid-area: dy;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);    
+}
+.curday{
+    background-color:#0078ff  !important;
+    color: white !important;
+}
+
+.range{
+    background-color:#0077ff42  !important;
+
+}
+.dates{
+    grid-area: dt;
+    display: grid;
+    grid-template: repeat(5,1fr)/repeat(7,1fr);
+}
+
+.next{
+    grid-area: nx;
+}
+
+.month{
+    grid-area: mn;
+}
+
+.year{
+    grid-area: yr;
+}
+
+.back{
+    grid-area: bk;
+}
+
+.dates{
+    display: grid;
+    grid-template: repeat(5,1fr)/repeat(7,1fr);
+    /* justify-items: center;
+    align-items: center; */
+}
+.dates>*{
+width: 100%;
+height: 100%;
+background-color: white;
+/* justify-self: center; */
+display: flex;
+justify-content: center;
+/* align-content: center; */
+flex-direction: column;
+color: #0078ff;
+
+}
+.dates>*:hover{
+    background-color: whitesmoke;
+    
+}
